@@ -19,4 +19,4 @@ I now understand more about:
 - Managing IDE-generated files in a repository.
 
 ## Reverting commits
-I decided to revert a commit where I adding some formating to my readme because I didn't like how it looked. It was really easy to do.
+I decided to revert a commit where I added some formating to my readme because I didn't like how it looked. It was really easy to do.
