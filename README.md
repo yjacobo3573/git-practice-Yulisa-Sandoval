@@ -3,4 +3,4 @@
 
 **Favorite Programming Language:** Python
 
-**Fun Fact:** I love taking long walks.
+**Fun Fact:** I love taking long walks; it helps me de-stress.
