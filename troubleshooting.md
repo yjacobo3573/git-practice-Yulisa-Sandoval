@@ -17,3 +17,6 @@ Although this process was a bit tricky, especially since I had to use the comman
 I now understand more about:
 - How Git works.
 - Managing IDE-generated files in a repository.
+
+## Reverting commits
+I decided to revert a commit where I adding some formating to my readme because I didn't like how it looked. It was really easy to do.
