@@ -28,3 +28,40 @@ my team member gave me some feedback on making my README more decorative, and th
 helped me out since I don't have much experience in that matter. Furthermore, they sent me
 a pull request and I was easily able to merge the changes into my repository.
 
+erDiagram
+    STUDENT {
+        int StudentID
+        string Name
+        string Email
+        string Phone
+    }
+    
+    COURSE {
+        int CourseID
+        string CourseName
+        int Credits
+    }
+    
+    ENROLLMENT {
+        int EnrollmentID
+        int StudentID
+        int CourseID
+        date EnrollmentDate
+    }
+    
+    INSTRUCTOR {
+        int InstructorID
+        string Name
+        string Email
+        string Phone
+    }
+    
+    DEPARTMENT {
+        int DepartmentID
+        string DeptName
+    }
+    
+    STUDENT ||--o{ ENROLLMENT : enrolls
+    COURSE ||--o{ ENROLLMENT : includes
+    COURSE }o--|| INSTRUCTOR : taught_by
+    INSTRUCTOR }o--|| DEPARTMENT : belongs_to
