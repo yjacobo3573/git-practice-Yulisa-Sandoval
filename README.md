@@ -30,7 +30,4 @@ a pull request and I was easily able to merge the changes into my repository.
 
 
     
-    STUDENT ||--o{ ENROLLMENT : enrolls
-    COURSE ||--o{ ENROLLMENT : includes
-    COURSE }o--|| INSTRUCTOR : taught_by
-    INSTRUCTOR }o--|| DEPARTMENT : belongs_to
+    
