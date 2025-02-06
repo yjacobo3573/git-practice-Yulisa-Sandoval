@@ -36,3 +36,20 @@ flowchart TD
     E2 --> F2(Modify_and_Delete_Existing_Cards)
     F2 --> G2(Logout)
 ```
+
+
+
+```mermaid
+
+flowchart TD
+    A[Front-end] --> B[Barcened]
+    A --> C[M1]
+    
+    D[Main backboard] --> E[Backbone]
+    D --> F[Process(s)]
+    D --> G[decision]
+    
+    H[Dontabase] --> I[Module Load]
+    H --> J[Module Load]
+
+```
