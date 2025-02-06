@@ -1,6 +1,10 @@
 
 
 ```mermaid
+---
+title: User Flow Diagram for Card Management App
+---
+
 %% User Flow Diagram
 flowchart TD
     A(Open_App) --> B(Home_Screen)
@@ -20,6 +24,9 @@ flowchart TD
 
 
 ```mermaid
+---
+title: Admin Flow Diagram for Card Management App
+---
 %% Admin Flow Diagram
 flowchart TD
     A2(Open_App) --> B2(Dashboard)
