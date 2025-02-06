@@ -38,18 +38,20 @@ flowchart TD
 ```
 
 
-
 ```mermaid
+---
+title: Admin Flow Diagram for Card Management App
+---
 
 flowchart TD
-    A[Front-end] --> B[Barcened]
-    A --> C[M1]
+    A[Front-end] --> B[Manage decks]
+    A --> C[Submit new cards]
     
     D[Main backboard] --> E[Backbone]
-    D --> F[Process(s)]
+    D --> F[Process_s]
     D --> G[decision]
     
-    H[Dontabase] --> I[Module Load]
-    H --> J[Module Load]
+    H[Dontabase] --> I[Module_Load]
+    H --> J[Module_Load]
 
 ```
