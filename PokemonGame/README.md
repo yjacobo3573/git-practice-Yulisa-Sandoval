@@ -12,13 +12,18 @@ flowchart TD
     G --> H(Select_Manage_Deck)
     H --> I(Manage_Deck_Screen)
     I --> J(Assemble_Deck)
-    J --> K(Logout)
+    J --> K(Logout)  end
+
+
+
+
 
 %% Admin Flow Diagram
 flowchart TD
-    A(Open_App) --> B(Dashboard)
-    B --> C(Approve_User_Submitted_Cards)
-    C --> D(Select_Cards_Tab)
-    D --> E(Cards_Screen)
-    E --> F(Modify_and_Delete_Existing_Cards)
-    F --> G(Logout)
+    A2(Open_App) --> B2(Dashboard)
+    B2 --> C2(Approve_User_Submitted_Cards)
+    C2 --> D2(Select_Cards_Tab)
+    D2 --> E2(Cards_Screen)
+    E2 --> F2(Modify_and_Delete_Existing_Cards)
+    F2 --> G2(Logout)
+
