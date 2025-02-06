@@ -12,12 +12,14 @@ flowchart TD
     G --> H(Select_Manage_Deck)
     H --> I(Manage_Deck_Screen)
     I --> J(Assemble_Deck)
-    J --> K(Logout)  end
+    J --> K(Logout)  
+
+```
 
 
 
 
-
+```mermaid
 %% Admin Flow Diagram
 flowchart TD
     A2(Open_App) --> B2(Dashboard)
@@ -26,4 +28,4 @@ flowchart TD
     D2 --> E2(Cards_Screen)
     E2 --> F2(Modify_and_Delete_Existing_Cards)
     F2 --> G2(Logout)
-
+```
