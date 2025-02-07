@@ -40,16 +40,26 @@ flowchart TD
 
 ```mermaid
 ---
-title: Admin Flow Diagram for Card Management App
+title: Software Architecture Diagram
 ---
 
 flowchart TD
-    A[Front-end] --> B[Manage decks]
+    A1[User] --> A[Front-end]
+    
+    A --> B[Manage decks]
     A --> C[Submit new cards]
     
-    D[Backend API] 
+    A --> D[Backend API]
     
-    H[Admin-Dashboard] --> I[Delete_Card]
-    H --> J[Approve_Card]
+    D --> E[Admin-Dashboard]
+    
+    E --> F[Delete_Card]
+    E --> G[Approve_Card]
+    E --> H[Modify_Card]
+
+    E --> I[Backend processes decision]
+    
+    I --> J[Database]
+
 
 ```
