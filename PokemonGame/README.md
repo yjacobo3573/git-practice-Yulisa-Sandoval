@@ -29,11 +29,6 @@ erDiagram
         int Deck_Size
     }
 
-    DECK_CARDS {
-        int Deck_ID FK
-        int Card_ID FK
-    }
-    
     PENDING_CARDS {
         int Pending_Card_ID PK
         int Card_ID FK
@@ -41,11 +36,10 @@ erDiagram
         date Submission_Date
     }
     
-    USER ||--o{ DECK : "has"
+     USER ||--o{ DECK : "has"
     USER ||--o{ PENDING_CARDS : "submits"
+    CARD ||--|{ DECK : "belongs to"
     CARD ||--o{ PENDING_CARDS : "is pending"
-    CARD ||--o{ DECK_CARDS : "is part of"
-    DECK ||--o{ DECK_CARDS : "contains"
 ```
 
 ```mermaid
