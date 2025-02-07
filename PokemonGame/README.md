@@ -47,11 +47,9 @@ flowchart TD
     A[Front-end] --> B[Manage decks]
     A --> C[Submit new cards]
     
-    D[Main backboard] --> E[Backbone]
-    D --> F[Process_s]
-    D --> G[decision]
+    D[Backend API] 
     
-    H[Dontabase] --> I[Module_Load]
-    H --> J[Module_Load]
+    H[Admin-Dashboard] --> I[Delete_Card]
+    H --> J[Approve_Card]
 
 ```
