@@ -1,4 +1,52 @@
+```mermaid
+---
+title: ER Diagram for Card Management App
+---
 
+
+erDiagram
+    USER {
+        int User_ID PK
+        string Email
+        string Password
+        string Role "User, Admin"
+    }
+    
+    CARD {
+        int Card_ID PK
+        string Name
+        string Type
+        string Rarity
+        string Attack
+        string Defense_Stats
+        string Status "Pending, Approved"
+    }
+    
+    DECK {
+        int Deck_ID PK
+        int User_ID FK
+        string Deck_Name
+        int Deck_Size
+    }
+
+    DECK_CARDS {
+        int Deck_ID FK
+        int Card_ID FK
+    }
+    
+    PENDING_CARDS {
+        int Pending_Card_ID PK
+        int Card_ID FK
+        int User_ID FK
+        date Submission_Date
+    }
+    
+    USER ||--o{ DECK : "has"
+    USER ||--o{ PENDING_CARDS : "submits"
+    CARD ||--o{ PENDING_CARDS : "is pending"
+    CARD ||--o{ DECK_CARDS : "is part of"
+    DECK ||--o{ DECK_CARDS : "contains"
+```
 
 ```mermaid
 ---
@@ -63,6 +111,9 @@ flowchart TD
 
 
 ```
+
+# Card Management API Endpoints
+
 | **Endpoint**                         | **Method** | **Description**                                   | **Authentication** |
 |--------------------------------------|-----------|-------------------------------------------------|--------------------|
 | `/api/cards`                         | `GET`     | Retrieve all Pokémon cards                      | User               |
@@ -83,54 +134,8 @@ flowchart TD
 | `/api/auth/register`                  | `POST`    | Register a new user                          | Admin               |
 | `/api/auth/logout`                    | `POST`    | Logout current session                       | Admin               |
 
-```mermaid
----
-title: Software Architecture Diagram
----
-
-
-erDiagram
-    USER {
-        int User_ID PK
-        string Email
-        string Password
-        string Role "User, Admin"
-    }
-    
-    CARD {
-        int Card_ID PK
-        string Name
-        string Type
-        string Stat_Values
-        string Status "Pending, Approved"
-    }
-    
-    DECK {
-        int Deck_ID PK
-        int User_ID FK
-        string Deck_Name
-        int Deck_Size
-    }
-
-    DECK_CARDS {
-        int Deck_ID FK
-        int Card_ID FK
-    }
-    
-    PENDING_CARDS {
-        int Pending_Card_ID PK
-        int Card_ID FK
-        int User_ID FK
-        date Submission_Date
-    }
-    
-    USER ||--o{ DECK : "has"
-    USER ||--o{ PENDING_CARDS : "submits"
-    CARD ||--o{ PENDING_CARDS : "is pending"
-    CARD ||--o{ DECK_CARDS : "is part of"
-    DECK ||--o{ DECK_CARDS : "contains"
 
 
 
 
-```
+
