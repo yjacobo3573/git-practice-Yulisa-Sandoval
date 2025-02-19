@@ -1,3 +1,5 @@
+
+
 def print_board(board):
     for r in board:
         print(" | ".join(r))
