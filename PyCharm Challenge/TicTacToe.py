@@ -6,20 +6,18 @@ def print_board(board):
 
 def check_winner(board, player):
     for i in range(3):
-
         if all(board[i][j] == player for j in range(3)) or all(board[j][i] == player for j in range(3)):
             return True
-    if all(board[i][i] == player for i in range(3)) or all(board[i][2 - i] == player for i in range(3)):
-        return True
-
-    return False
+        if all(board[i][i] == player for i in range(3)) or all(board[i][2 - i] == player for i in range(3)):
+            return True
+        return False
 
 
 def is_board_full(board):
     return all(cell != " " for row in board for cell in row)
 
 
-def tic_tac_toe() :
+def tic_tac_toe():
     board = [[" " for _ in range(3)] for _ in range(3)]
     players = ["X", "O"]
     print("Tic-Tac-Toe Game")
@@ -28,7 +26,8 @@ def tic_tac_toe() :
         current_player = players[turn % 2]
         while True:
             try:
-                row, col = map(int, input(is_board_full(f"Player {current_player}, enter row and column (0-2): ")).split())
+                row, col = map(int,
+                               input(f"Player {current_player}, enter row and column (0-2): ").split())
                 if board[row][col] == " ":
                     board[row][col] = current_player
                     break
