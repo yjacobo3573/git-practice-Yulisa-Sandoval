@@ -26,17 +26,7 @@ def tic_tac_toe():
     print_board(board)
     for turn in range(9):
         current_player = players[turn % 2]
-        while True:
-            try:
-                row, col = map(int,
-                               input(f"Player {current_player}, enter row and column (0-2): ").split())
-                if board[row][col] == " ":
-                    board[row][col] = current_player
-                    break
-                else:
-                    print("Cell in use! Try again.")
-            except(ValueError, IndexError):
-                print("Cell occupied! Try again.")
+        get_player_input(board, current_player)
         print_board(board)
         if check_winner(board, current_player):
             print(f"Player {current_player} wins!")
@@ -45,5 +35,20 @@ def tic_tac_toe():
             print("It's a draw!")
             return
     print("It's a draw!")
+
+
+def get_player_input(board, current_player):
+    while True:
+        try:
+            row, col = map(int,
+                           input(f"Player {current_player}, enter row and column (0-2): ").split())
+            if board[row][col] == " ":
+                board[row][col] = current_player
+                break
+            else:
+                print("Cell in use! Try again.")
+        except(ValueError, IndexError):
+            print("Cell occupied! Try again.")
+
 
 tic_tac_toe()
