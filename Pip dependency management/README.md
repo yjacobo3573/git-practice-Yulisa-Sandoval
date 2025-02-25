@@ -1,4 +1,4 @@
-# **Global Population Density Visualization Script**
+# **Pip Dependency Management**
 
 ## **Purpose of the Script**
 This script downloads, processes, and visualizes global population density on an interactive 3D globe using Plotly. It follows these key steps:
