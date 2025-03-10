@@ -6,6 +6,7 @@ def reverse_string(s)
 
 
 def get_list_element(lst, index):
+  For this function I discovered two errors from my test cases. The first one was that the else was simply returning "Not found" instead of an actual error. So, I fixed it to return a index error with a customized message. The other error was that there wasn't any checks to make sure the index was a number and not a string.
   
 
 
