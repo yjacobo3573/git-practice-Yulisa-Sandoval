@@ -1,4 +1,4 @@
-#def divide_numbers(a,b)
+#def divide_numbers(a,b)#
   For this function I discovered a mistake from my test case. The mistake was that there wasn't any error handling for division by 0. So, I simply modified the function to explicitly raise a zero division error with a custom error message which optimized it.
 
 def reverse_string(s)
