@@ -1,59 +1,39 @@
 """This is an example of a program with many costly defects"""
 
-import math
-import random
-
-
 def expensive_op(n):
     """
-        Performs a computationally expensive operation by summing i * n for i in range(1000).
+        Efficiently computes the sum of i * n for i in range(1000) using a formula.
 
-        Args:
-            n (int): A multiplier applied to each value from 0 to 999.
+    Args:
+        n (int): A multiplier applied to each value from 0 to 999.
 
-        Returns:
-            int: The total sum of i * n for i in range(1000).
+    Returns:
+        int: The total sum of i * n for i in range(1000).
         """
-    total = 0
-    for i in range(1000):
-        total += i * n
-    return total
+    return n * (999 * 1000) // 2
 
 
 def slow_func(lst):
     """
-       Runs expensive_op on each index of the input list.
+        Runs expensive_op on each index of the input list using list comprehension.
 
-       Args:
-           lst (list): Input list (only length is used).
-
-       Returns:
-           list: Results from expensive_op(i) for each index i.
-       """
-    result = []
-    for i in range(len(lst)):
-        result.append(expensive_op(i))
-    return result
-
-
-def unused_function():
-    """
-        Adds two numbers and returns the result.
+        Args:
+            lst (list): Input list (only its length is used).
 
         Returns:
-            int: The sum of 10 and 20.
+            list: Results from expensive_op(i) for each index i.
         """
-    x = 10
-    y = 20
-    z = x + y
-    return z
+    return [expensive_op(i) for i in range(len(lst))]
+
 
 
 def main():
     """
-       Executes the main routine by running slow_func on a list of 1000 numbers.
+       Executes the main routine by printing done.
        """
     print("Done")
+    car=[1,2,3]
+    slow_func(car)
 
 
 if __name__ == "__main__":
