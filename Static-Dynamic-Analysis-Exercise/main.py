@@ -1,5 +1,9 @@
 """This is an example of a program with many costly defects"""
+from functools import lru_cache
 
+
+@lru_cache(maxsize=None)
+@profile
 def expensive_op(n):
     """
         Efficiently computes the sum of i * n for i in range(1000) using a formula.
@@ -31,9 +35,10 @@ def main():
     """
        Executes the main routine by printing done.
        """
+    numbers = list(range(1000))
+    output = slow_func(numbers)
+    print(output)
     print("Done")
-    car=[1,2,3]
-    slow_func(car)
 
 
 if __name__ == "__main__":
